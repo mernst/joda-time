@@ -745,19 +745,15 @@
       <groupId>org.checkerframework</groupId>
       <artifactId>checker-qual</artifactId>
       <version>2.1.9</version>
-      <!--
       <scope>system</scope>
-      <systemPath>$env.CHECKERFRAMEWORK/checker/dist/checker-qual.jar</systemPath>
-      -->
+      <systemPath>${env.CHECKERFRAMEWORK}/checker/dist/checker-qual.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>org.checkerframework</groupId>
       <artifactId>checker</artifactId>
       <version>2.1.9</version>
-      <!--
       <scope>system</scope>
-      <systemPath>$env.CHECKERFRAMEWORK/checker/dist/checker.jar</systemPath>
-      -->
+      <systemPath>${env.CHECKERFRAMEWORK}/checker/dist/checker.jar</systemPath>
     </dependency>
     <!-- The type annotations compiler - uncomment if desired -->
     <!-- <dependency>
@@ -766,7 +762,7 @@
       <version>2.1.9</version>
       <! - -
       <scope>system</scope>
-      <systemPath>$env.CHECKERFRAMEWORK/checker/dist/compiler.jar</systemPath>
+      <systemPath>${env.CHECKERFRAMEWORK}/checker/dist/compiler.jar</systemPath>
       - - >
     </dependency> -->
     <!-- The annotated JDK to use (change to jdk7 if using Java 7) -->
@@ -774,10 +770,8 @@
       <groupId>org.checkerframework</groupId>
       <artifactId>jdk8</artifactId>
       <version>2.1.9</version>
-      <!--
       <scope>system</scope>
-      <systemPath>$env.CHECKERFRAMEWORK/checker/dist/jdk8.jar</systemPath>
-      -->
+      <systemPath>${env.CHECKERFRAMEWORK}/checker/dist/jdk8.jar</systemPath>
     </dependency>
   </dependencies>
 
