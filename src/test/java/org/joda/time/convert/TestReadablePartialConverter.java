@@ -134,7 +134,7 @@ public class TestReadablePartialConverter extends TestCase {
             }
             return null;
         }
-        public int size() {
+        public @IntVal(4) int size() {
             return 4;
         }
     }

@@ -41,6 +41,7 @@ import org.joda.time.DateTimeZone;
  * @author Brian S O'Neill
  * @since 1.0
  */
+@SuppressWarnings("cast.unsafe") // issue #149
 public final class GregorianChronology extends BasicGJChronology {
 
     /** Serialization lock */

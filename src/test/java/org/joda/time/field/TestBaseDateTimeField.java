@@ -608,7 +608,7 @@ public class TestBaseDateTimeField extends TestCase {
             }
             return null;
         }
-        public int size() {
+        public @IntVal(2) int size() {
             return 2;
         }
         

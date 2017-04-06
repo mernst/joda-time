@@ -74,6 +74,7 @@ import org.joda.time.format.ISODateTimeFormat;
  * using {@link DateTime#withTimeAtStartOfDay()} to get an instant at the
  * start of a day.
  */
+@SuppressWarnings("index") // deprecated
 @Deprecated
 public final class DateMidnight
         extends BaseDateTime

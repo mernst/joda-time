@@ -29,7 +29,7 @@ public class MockPartial implements ReadablePartial {
     public Chronology getChronology() {
         return ISOChronology.getInstanceUTC();
     }
-    public int size() {
+    public @NonNegative int size() {
         return getFields().length;
     }
     public DateTimeFieldType getFieldType(int index) {

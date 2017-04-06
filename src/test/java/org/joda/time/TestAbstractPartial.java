@@ -165,7 +165,7 @@ public class TestAbstractPartial extends TestCase {
             }
         }
 
-        public int size() {
+        public @IntVal(2) int size() {
             return 2;
         }
         

@@ -33,6 +33,8 @@ import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.DateTimeFormatterBuilder;
 import org.joda.time.format.ISODateTimeFormat;
 
+import org.checkerframework.common.value.qual.*;
+
 /**
  * MonthDay is an immutable partial supporting the monthOfYear and dayOfMonth fields.
  * <p>
@@ -391,7 +393,7 @@ public final class MonthDay
      *
      * @return the field count, two
      */
-    public int size() {
+    public @IntVal(2) int size() {
         return 2;
     }
 

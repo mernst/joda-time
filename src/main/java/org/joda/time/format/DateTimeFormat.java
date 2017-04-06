@@ -27,6 +27,8 @@ import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.joda.time.ReadablePartial;
 
+import org.checkerframework.checker.index.qual.*;
+
 /**
  * Factory that creates instances of DateTimeFormatter from patterns and styles.
  * <p>
@@ -800,7 +802,7 @@ public class DateTimeFormat {
             iType = type;
         }
 
-        public int estimatePrintedLength() {
+        public @NonNegative int estimatePrintedLength() {
             return 40;  // guess
         }
 

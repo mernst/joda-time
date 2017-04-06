@@ -36,6 +36,8 @@ import org.joda.time.ReadablePartial;
 import org.joda.time.field.MillisDurationField;
 import org.joda.time.field.PreciseDateTimeField;
 
+import org.checkerframework.checker.index.qual.*;
+
 /**
  * Factory that creates complex instances of DateTimeFormatter via method calls.
  * <p>
@@ -1203,7 +1205,7 @@ public class DateTimeFormatterBuilder {
             iValue = value;
         }
 
-        public int estimatePrintedLength() {
+        public @NonNegative int estimatePrintedLength() {
             return 1;
         }
 
@@ -1256,7 +1258,7 @@ public class DateTimeFormatterBuilder {
             iValue = value;
         }
 
-        public int estimatePrintedLength() {
+        public @NonNegative int estimatePrintedLength() {
             return iValue.length();
         }
 
@@ -1377,7 +1379,7 @@ public class DateTimeFormatterBuilder {
             super(fieldType, maxParsedDigits, signed);
         }
 
-        public int estimatePrintedLength() {
+        public @NonNegative int estimatePrintedLength() {
             return iMaxParsedDigits;
         }
 
@@ -1417,7 +1419,7 @@ public class DateTimeFormatterBuilder {
             iMinPrintedDigits = minPrintedDigits;
         }
 
-        public int estimatePrintedLength() {
+        public @NonNegative int estimatePrintedLength() {
             return iMaxParsedDigits;
         }
 
@@ -1598,7 +1600,7 @@ public class DateTimeFormatterBuilder {
             return position + 2;
         }
         
-        public int estimatePrintedLength() {
+        public @NonNegative int estimatePrintedLength() {
             return 2;
         }
 
@@ -1665,7 +1667,7 @@ public class DateTimeFormatterBuilder {
             iShort = isShort;
         }
 
-        public int estimatePrintedLength() {
+        public @NonNegative int estimatePrintedLength() {
             return iShort ? 6 : 20;
         }
 
@@ -1791,7 +1793,7 @@ public class DateTimeFormatterBuilder {
             iMaxDigits = maxDigits;
         }
 
-        public int estimatePrintedLength() {
+        public @NonNegative int estimatePrintedLength() {
             return iMaxDigits;
         }
 
@@ -1977,7 +1979,7 @@ public class DateTimeFormatterBuilder {
             iMaxFields = maxFields;
         }
             
-        public int estimatePrintedLength() {
+        public @NonNegative int estimatePrintedLength() {
             int est = 1 + iMinFields << 1;
             if (iShowSeparators) {
                 est += iMinFields - 1;
@@ -2260,7 +2262,7 @@ public class DateTimeFormatterBuilder {
             iParseLookup = parseLookup;
         }
 
-        public int estimatePrintedLength() {
+        public @NonNegative int estimatePrintedLength() {
             return (iType == SHORT_NAME ? 4 : 20);
         }
 
@@ -2350,7 +2352,7 @@ public class DateTimeFormatterBuilder {
             MAX_PREFIX_LENGTH = maxPrefix;
         }
 
-        public int estimatePrintedLength() {
+        public @NonNegative int estimatePrintedLength() {
             return MAX_LENGTH;
         }
 
@@ -2461,7 +2463,7 @@ public class DateTimeFormatterBuilder {
             }
         }
 
-        public int estimatePrintedLength() {
+        public @NonNegative int estimatePrintedLength() {
             return iPrintedLengthEstimate;
         }
 

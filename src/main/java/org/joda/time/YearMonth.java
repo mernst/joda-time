@@ -30,6 +30,8 @@ import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.ISODateTimeFormat;
 
+import org.checkerframework.common.value.qual.*;
+
 /**
  * YearMonth is an immutable partial supporting the year and monthOfYear fields.
  * <p>
@@ -383,7 +385,7 @@ public final class YearMonth
      *
      * @return the field count, two
      */
-    public int size() {
+    public @IntVal(2) int size() {
         return 2;
     }
 

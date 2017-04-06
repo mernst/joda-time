@@ -39,6 +39,8 @@ import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.ISODateTimeFormat;
 
+import org.checkerframework.common.value.qual.*;
+
 /**
  * LocalDate is an immutable datetime class representing a date
  * without a time zone.
@@ -482,7 +484,8 @@ public final class LocalDate
      *
      * @return the field count, three
      */
-    public int size() {
+    @SuppressWarnings("index")  // issue 147
+    public @IntVal(3) int size() {
         return 3;
     }
 

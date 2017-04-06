@@ -26,6 +26,8 @@ import org.joda.time.field.AbstractPartialFieldProperty;
 import org.joda.time.field.FieldUtils;
 import org.joda.time.format.ISODateTimeFormat;
 
+import org.checkerframework.common.value.qual.*;
+
 /**
  * YearMonthDay is an immutable partial supporting the year, monthOfYear
  * and dayOfMonth fields.
@@ -62,6 +64,7 @@ import org.joda.time.format.ISODateTimeFormat;
  *  has been available since 1.3
  */
 @Deprecated
+@SuppressWarnings("index") // deprecated
 public final class YearMonthDay
         extends BasePartial
         implements ReadablePartial, Serializable {
@@ -314,7 +317,8 @@ public final class YearMonthDay
      * 
      * @return the field count
      */
-    public int size() {
+    @SuppressWarnings("index") // issue 147
+    public @IntVal(3) int size() {
         return 3;
     }
 

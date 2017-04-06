@@ -15,6 +15,8 @@
  */
 package org.joda.time.convert;
 
+import org.checkerframework.checker.index.qual.*;
+
 /**
  * A set of converters, which allows exact converters to be quickly
  * selected. This class is threadsafe because it is (essentially) immutable.
@@ -114,7 +116,7 @@ class ConverterSet {
     /**
      * Returns the amount of converters in the set.
      */
-    int size() {
+    @NonNegative int size() {
         return iConverters.length;
     }
 

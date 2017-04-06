@@ -30,6 +30,8 @@ import org.joda.time.ReadablePeriod;
 import org.joda.time.chrono.ISOChronology;
 import org.joda.time.field.FieldUtils;
 
+import org.checkerframework.common.value.qual.*;
+
 /**
  * BaseSingleFieldPeriod is an abstract implementation of ReadablePeriod that
  * manages a single duration field, such as days or minutes.
@@ -199,7 +201,8 @@ public abstract class BaseSingleFieldPeriod
      *
      * @return the number of fields supported, which is one
      */
-    public int size() {
+    @SuppressWarnings("index") // issue 147
+    public @IntVal(1) int size() {
         return 1;
     }
 

@@ -28,6 +28,8 @@ import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.ISODateTimeFormat;
 
+import org.checkerframework.checker.index.qual.*;
+
 /**
  * Partial is an immutable partial datetime supporting any set of datetime fields.
  * <p>
@@ -330,7 +332,7 @@ public final class Partial
      * 
      * @return the field count
      */
-    public int size() {
+    public @NonNegative int size() {
         return iTypes.length;
     }
 

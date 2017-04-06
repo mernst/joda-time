@@ -26,6 +26,8 @@ import org.joda.time.field.AbstractPartialFieldProperty;
 import org.joda.time.field.FieldUtils;
 import org.joda.time.format.ISODateTimeFormat;
 
+import org.checkerframework.common.value.qual.*;
+
 /**
  * TimeOfDay is an immutable partial supporting the hour, minute, second
  * and millisecond fields.
@@ -62,6 +64,7 @@ import org.joda.time.format.ISODateTimeFormat;
  * @deprecated Use LocalTime which has a much better internal implementation and
  *  has been available since 1.3
  */
+@SuppressWarnings("index") // deprecated
 @Deprecated
 public final class TimeOfDay
         extends BasePartial
@@ -425,7 +428,8 @@ public final class TimeOfDay
      * 
      * @return the field count
      */
-    public int size() {
+    @SuppressWarnings("index") // issue 147
+    public @IntVal(4) int size() {
         return 4;
     }
 
