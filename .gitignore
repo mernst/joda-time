@@ -16,3 +16,6 @@
 src/tz-data/
 *TempTest*
 /src/main/resources/org/joda/time/tz/data/
+
+# Files used in type-checking case study
+check-index-output*.txt
