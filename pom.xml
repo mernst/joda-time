@@ -586,6 +586,11 @@
                 <annotationProcessor>org.checkerframework.checker.index.IndexChecker</annotationProcessor>
             </annotationProcessors>
             <compilerArgs>
+                <!-- Most of Joda-Time is immutable, and Joda-time assumes
+                   immutability internally, but I don't want to have to write
+                   @SideEffectFree everywhere.  This still doesn't get me what
+                   I want, since I want to assume @Pure nearly everywhere. -->
+                <arg>-AassumeSideEffectFree</arg>
                 <!-- location of the annotated JDK, which comes from a Maven dependency -->
                 <arg>-Xbootclasspath/p:${annotatedJdk}</arg>
                 <!-- Uncomment the following line to use the type annotations compiler. -->
