@@ -46,7 +46,7 @@ import org.joda.time.field.SkipDateTimeField;
  * @author Stephen Colebourne
  * @since 1.0
  */
-@SuppressWarnings("cast.unsafe") // issue #149
+@SuppressWarnings("cast.unsafe") // https://github.com/kelloggm/checker-framework/issues/149
 public final class JulianChronology extends BasicGJChronology {
 
     /** Serialization lock */

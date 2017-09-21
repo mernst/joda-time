@@ -537,7 +537,7 @@ public final class LocalDateTime
      *
      * @return the field count, four
      */
-    @SuppressWarnings("index")  // issue 147
+    @SuppressWarnings("index")  // https://github.com/kelloggm/checker-framework/issues/147
     public @IntVal(4) int size() {
         return 4;
     }

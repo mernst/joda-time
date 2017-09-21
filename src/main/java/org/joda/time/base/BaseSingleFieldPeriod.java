@@ -201,7 +201,7 @@ public abstract class BaseSingleFieldPeriod
      *
      * @return the number of fields supported, which is one
      */
-    @SuppressWarnings("index") // issue 147
+    @SuppressWarnings("index") // https://github.com/kelloggm/checker-framework/issues/147
     public @IntVal(1) int size() {
         return 1;
     }

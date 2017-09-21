@@ -428,7 +428,7 @@ public final class TimeOfDay
      * 
      * @return the field count
      */
-    @SuppressWarnings("index") // issue 147
+    @SuppressWarnings("index") // https://github.com/kelloggm/checker-framework/issues/147
     public @IntVal(4) int size() {
         return 4;
     }

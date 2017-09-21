@@ -484,7 +484,7 @@ public final class LocalDate
      *
      * @return the field count, three
      */
-    @SuppressWarnings("index")  // issue 147
+    @SuppressWarnings("index")  // https://github.com/kelloggm/checker-framework/issues/147
     public @IntVal(3) int size() {
         return 3;
     }

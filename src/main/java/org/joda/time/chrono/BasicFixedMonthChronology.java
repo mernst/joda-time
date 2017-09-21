@@ -32,7 +32,7 @@ import org.joda.time.DateTimeConstants;
  * @author Stephen Colebourne
  * @since 1.2, refactored from CopticChronology
  */
-@SuppressWarnings("cast.unsafe") // issue #149
+@SuppressWarnings("cast.unsafe") // https://github.com/kelloggm/checker-framework/issues/149
 abstract class BasicFixedMonthChronology extends BasicChronology {
 
     /** Serialization lock */

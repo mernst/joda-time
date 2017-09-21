@@ -62,7 +62,7 @@ import org.joda.time.DateTimeZone;
  * @author Stephen Colebourne
  * @since 1.2
  */
-@SuppressWarnings("cast.unsafe") // issue #149
+@SuppressWarnings("cast.unsafe") // https://github.com/kelloggm/checker-framework/issues/149
 public final class IslamicChronology extends BasicChronology {
 
     /** Serialization lock */
