@@ -8,6 +8,22 @@
   <body>
 
     <!-- types are add, fix, remove, update -->
+    <release version="2.9.10" date="SNAPSHOT" description="v2.9.10">
+      <action dev="jodastephen" type="fix">
+        Avoid double addition when using lenient chronology.
+        Fixes #432.
+      </action>
+      <action dev="jodastephen" type="fix">
+        Clarify Period.fieldDifference() Javadoc.
+      </action>
+      <action dev="jodastephen" type="fix">
+        Clarify Instant.withMillis() Javadoc.
+        Fixes jodaorg.github.io#5
+      </action>
+      <action dev="mikey-austin" type="update">
+        Add ZoneInfoProvider() constructor.
+      </action>
+    </release>
     <release version="2.9.9" date="2017-03-23" description="v2.9.9">
       <action dev="jodastephen" type="update">
         Optimise release process.

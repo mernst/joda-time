@@ -75,7 +75,7 @@ public final class Instant
 
     //-----------------------------------------------------------------------
     /**
-     * Parses a {@code Instant} from the specified string.
+     * Parses an {@code Instant} from the specified string.
      * <p>
      * This uses {@link ISODateTimeFormat#dateTimeParser()}.
      * 
@@ -88,7 +88,7 @@ public final class Instant
     }
 
     /**
-     * Parses a {@code Instant} from the specified string using a formatter.
+     * Parses an {@code Instant} from the specified string using a formatter.
      * 
      * @param str  the string to parse, not null
      * @param formatter  the formatter to use, not null
@@ -149,6 +149,10 @@ public final class Instant
      * Gets a copy of this instant with different millis.
      * <p>
      * The returned object will be either be a new Instant or <code>this</code>.
+     * <p>
+     * Note that this replaces the entire state of the <code>Instant</code>.
+     * To manage the sub-second part of the instant, use {@link #toDateTime()}
+     * and {@link DateTime#withMillisOfSecond(int)}.
      *
      * @param newMillis  the new millis, from 1970-01-01T00:00:00Z
      * @return a copy of this instant with different millis
