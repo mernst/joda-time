@@ -760,14 +760,14 @@
     <dependency>
       <groupId>org.checkerframework</groupId>
       <artifactId>checker-qual</artifactId>
-      <version>2.1.9</version>
+      <version>${checkerframework.version}</version>
       <scope>system</scope>
       <systemPath>${env.CHECKERFRAMEWORK}/checker/dist/checker-qual.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>org.checkerframework</groupId>
       <artifactId>checker</artifactId>
-      <version>2.1.9</version>
+      <version>${checkerframework.version}</version>
       <scope>system</scope>
       <systemPath>${env.CHECKERFRAMEWORK}/checker/dist/checker.jar</systemPath>
     </dependency>
@@ -775,7 +775,7 @@
     <!-- <dependency>
       <groupId>org.checkerframework</groupId>
       <artifactId>compiler</artifactId>
-      <version>2.1.9</version>
+      <version>${checkerframework.version}</version>
       <! - -
       <scope>system</scope>
       <systemPath>${env.CHECKERFRAMEWORK}/checker/dist/compiler.jar</systemPath>
@@ -785,7 +785,7 @@
     <dependency>
       <groupId>org.checkerframework</groupId>
       <artifactId>jdk8</artifactId>
-      <version>2.1.9</version>
+      <version>${checkerframework.version}</version>
       <scope>system</scope>
       <systemPath>${env.CHECKERFRAMEWORK}/checker/dist/jdk8.jar</systemPath>
     </dependency>
@@ -1064,9 +1064,9 @@
     <tz.database.version>2017b</tz.database.version>
 
     <!-- These properties will be set by the Maven Dependency plugin -->
-    <!-- Change to jdk7 if using Java 7 -->
+    <checkerframework.version>2.2.0</checkerframework.version>
     <annotatedJdk>${org.checkerframework:jdk8:jar}</annotatedJdk>
-    <!-- Uncomment to use the type annotations compiler. -->
+    <!-- Uncomment to use the Type Annotations compiler. -->
     <!-- <typeAnnotationsJavac>${org.checkerframework:compiler:jar}</typeAnnotationsJavac> -->
 
   </properties>
