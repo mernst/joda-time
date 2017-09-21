@@ -184,7 +184,6 @@ public abstract class AbstractDuration implements ReadableDuration {
      *
      * @return the value as an ISO8601 string
      */
-    @SuppressWarnings("index") // Strings
     @ToString
     public String toString() {
         long millis = getMillis();
