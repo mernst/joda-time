@@ -589,15 +589,20 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.3</version>
           <configuration>
-            <!-- Change source and target to 1.7 if using Java 7 -->
             <source>1.8</source>
             <target>1.8</target>
             <fork>true</fork>
+            <compilerArguments>
+                <Xmaxerrs>10000</Xmaxerrs>
+                <Xmaxwarns>10000</Xmaxwarns>
+-AprintErrorStack
+            </compilerArguments>
             <annotationProcessors>
                 <!-- Add all the checkers you want to enable here -->
                 <annotationProcessor>org.checkerframework.checker.index.IndexChecker</annotationProcessor>
             </annotationProcessors>
             <compilerArgs>
+                <arg>-AprintErrorStack</arg>
                 <!-- Most of Joda-Time is immutable, and Joda-time assumes
                    immutability internally, but I don't want to have to write
                    @SideEffectFree everywhere.  This still doesn't get me what
