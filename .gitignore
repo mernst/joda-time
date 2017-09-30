@@ -19,3 +19,4 @@ src/tz-data/
 
 # Files used in type-checking case study
 check-index-output*.txt
+make-typecheck-output.txt
